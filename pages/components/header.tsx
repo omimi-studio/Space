@@ -27,7 +27,7 @@ const user = {
   email: "omimi@example.com",
   imageUrl: avatar,
 };
-const navigation = [{ name: "Stake", href: "/" },{ name: "Reward", href: "/" }];
+const navigation = [{ name: "Stake", href: "/" },{ name: "Reward", href: "/reward" }];
 
 const userNavigation = [
   { name: "Your Profile", href: "/profile" },
@@ -137,13 +137,13 @@ export default function Header() {
                       </div>
                       <div className="mt-3 space-y-1 px-2">
                         {userNavigation.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
                             href={item.href}
                             className="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -157,13 +157,13 @@ export default function Header() {
             className="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4 glassmorphic rounded-full px-2 py-2"
           >
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="px-8 py-3 text-sm font-medium text-black rounded-full bg-white"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 

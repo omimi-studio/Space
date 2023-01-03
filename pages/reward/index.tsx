@@ -20,8 +20,8 @@ import { ArrowsUpDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Listbox } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import BTC from "../assets/logos/bitcoin-color-icon.svg";
-import ETH from "../assets/logos/ethereum-eth.svg";
+import BTC from "../../assets/logos/bitcoin-color-icon.svg";
+import ETH from "../../assets/logos/ethereum-eth.svg";
 import Image from "next/image";
 
 const tokens = [
@@ -50,7 +50,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Stake() {
+export default function Home() {
   const cryptoBalance = 6048.543;
   const stakeAmountRef = useRef();
   const [stake_amount, SetStakeAmount] = useState(0);
@@ -178,9 +178,9 @@ function Stake() {
               <span>
                 <h2
                   id="applicant-information-title"
-                  className="text-3xl font-bold leading-6 "
+                  className="text-3xl font-bold text-black leading-6 "
                 >
-                  Stake to earn
+                  Reward
                 </h2>
                 <p className="mt-1 max-w-2xl text-sm text-gray-600">
                   Buy native token and proceed to stake
@@ -389,5 +389,3 @@ function Stake() {
     </>
   );
 }
-
-export default Stake;

@@ -76,7 +76,7 @@ const navigation = [
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-base text-white">&copy; {new Date().getFullYear()} Quantum Finance. All rights reserved.</p>
+            <p className="text-center text-base text-white">&copy; {new Date().getFullYear()} Space Worriors Club. All rights reserved.</p>
           </div>
         </div>
       </footer>

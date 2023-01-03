@@ -20,8 +20,8 @@ import { ArrowsUpDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Listbox } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import BTC from "../assets/logos/bitcoin-color-icon.svg";
-import ETH from "../assets/logos/ethereum-eth.svg";
+import BTC from "../../assets/logos/bitcoin-color-icon.svg";
+import ETH from "../../assets/logos/ethereum-eth.svg";
 import Image from "next/image";
 
 const tokens = [
@@ -50,7 +50,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Home() {
+function Stake() {
   const cryptoBalance = 6048.543;
   const stakeAmountRef = useRef();
   const [stake_amount, SetStakeAmount] = useState(0);
@@ -168,14 +168,17 @@ export default function Home() {
 
   return (
     <>
-      <div className="mx-auto mt-5 glassmorphic max-w-2xl py-6 sm:rounded-lg sm:px-6">
-        <section aria-labelledby="stake-form">
+      <div className="mx-auto mt-5 grid glassmorphic max-w-3xl grid-cols-1 py-6 sm:rounded-lg sm:px-6 lg:max-w-5xl lg:grid-flow-col-dense lg:grid-cols-3">
+        <section
+          className="space-y-6 lg:col-span-2 lg:col-start-1"
+          aria-labelledby="stake-form"
+        >
           <div className="bg-white p-2 sm:p-5 shadow sm:rounded-lg min-h-[70vh]">
             <div className="flex items-end flex-wrap gap-3 justify-between px-4 py-5 sm:px-6 max-w-xl mx-auto">
               <span>
                 <h2
                   id="applicant-information-title"
-                  className="text-3xl text-black font-bold leading-6 "
+                  className="text-3xl font-bold leading-6 "
                 >
                   Stake to earn
                 </h2>
@@ -305,7 +308,86 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* <section
+          aria-labelledby="stake-overview"
+          className="lg:col-span-1 lg:col-start-3 h-full"
+        >
+          <div className="bg-[#0a0a0a] px-4 py-5 shadow sm:rounded-lg sm:px-6 min-h-full">
+            <div className="border-b border-white/25  py-5 max-w-xl mx-auto">
+              <h2 className="text-2xl uppercase font-bold leading-6 text-white">
+                Overview
+              </h2>
+            </div>
+            <div className="flex items-center pt-10 pb-5">
+              <div className=" p-3 ring-1 ring-white/25 rounded-lg">
+                <Image
+                  className="h-7 w-7  rounded-full hue-rotate-180"
+                  src={ETH}
+                  alt="icon"
+                />
+              </div>
+              <div className="ml-3 text-sm font-normal text-gray-500">
+                <p className="text-white">nQNT</p>
+                <p className="text-white font-bold">0.000</p>
+                <p className="text-white/50 font-thin text-[10px]">
+                  ~${stakeQuivalent_in_USD * 3.3334}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col items-start py-5 border-b border-white/25 ">
+              <p className="block mb-4 text-white/25 text-sm ">Staked</p>
+              <div className="flex items-center ">
+                <div className=" p-3 ring-1 ring-white/25 rounded-lg">
+                  <Image className="h-7 w-7  rounded-full" src={ETH} alt="" />
+                </div>
+                <div className="ml-3 text-sm font-normal text-gray-500">
+                  <p className="text-white">QNT</p>
+                  <p className="text-white font-bold">0.000</p>
+                  <p className="text-white/50 font-thin text-[10px]">
+                    ~${stakeQuivalent_in_USD * 3.3334}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-start pt-5 pb-10 ">
+              <p className="block mb-4 text-white/25 text-sm ">Balance</p>
+              <div className="flex items-center ">
+                <div className=" p-3 ring-1 ring-white/25 rounded-lg">
+                  <Image
+                    className="h-7 w-7  rounded-full hue-rotate-180"
+                    src={ETH}
+                    alt="icon"
+                  />
+                </div>
+                <div className="ml-3 text-sm font-normal text-gray-500">
+                  <p className="text-white">nQNT</p>
+                  <p className="text-white font-bold">0.000</p>
+                  <p className="text-white/50 font-thin text-[10px]">
+                    ~${stakeQuivalent_in_USD * 3.3334}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col  rounded-md gap-3  justify-between shadow-xl">
+              <span className=" flex justify-between items-center max-w-2xl text-sm text-white/50 p-2 rounded-sm ring-1 ring-gray-700">
+                <span>Approximate Staking APR</span>
+                <span className="text-white font-bold">14.90%</span>
+              </span>
+              <span className=" flex justify-between items-center max-w-2xl text-sm text-white/50 p-2 rounded-sm ring-1 ring-gray-700">
+                <span>Total QNT Locked</span>
+                <span className="text-white font-bold">14,536,373.3</span>
+              </span>
+              <span className=" flex justify-between items-center max-w-2xl text-sm text-white/50 p-2 rounded-sm ring-1 ring-gray-700">
+                <span>Staked Protocol Fees</span>
+                <span className="text-white font-bold">$1,434,544</span>
+              </span>
+            </div>
+          </div>
+        </section> */}
       </div>
     </>
   );
 }
+
+export default Stake;
