@@ -43,6 +43,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 export default function Header() {
+  const location = useRouter().pathname;
   return (
     <header className="bg-transparent shadow">
       <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
@@ -165,7 +166,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`px-8 py-3 text-sm font-medium rounded-full  ${
-                  useRouter().pathname === item.href
+                  location === item.href
                     ? "text-black bg-white"
                     : "text-white bg-transparent"
                 }`}
