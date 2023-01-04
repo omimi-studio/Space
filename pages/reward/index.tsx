@@ -16,7 +16,7 @@
 import { Fragment, useEffect, useRef } from "react";
 import { Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/20/solid";
-import { ArrowsUpDownIcon } from "@heroicons/react/24/outline";
+import { ArrowDownRightIcon, ArrowsUpDownIcon, BellIcon, ChevronRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Listbox } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -173,47 +173,51 @@ export default function Home() {
           className="space-y-6 lg:col-span-2 lg:col-start-1"
           aria-labelledby="stake-form"
         >
-          <div className="bg-white p-2 sm:p-10 shadow sm:rounded-lg min-h-[70vh] w-full">
-            <div className="flex gap-10 w-full">
+          <div className="bg-white text-black p-2 lg:p-10 shadow sm:rounded-lg min-h-[70vh]">
+            <div className="flex flex-col sm:flex-row  justify-between ">
               <div>
-                <div className="shadow-md rounded-xl px-10 py-8 flex flex-col items-center justify-around">
-                  {/* <div className="rounded-tr-full w-32 h-32 border-r-4 border-black" />
-                  <div className="rounded-tl-full w-32 h-32 border-l-4" /> */}
-                  <div className="bg-black border-4 border-spacing-4 border-gray-400 rounded-full w-20 h-20 "></div>
+                <div className="relative shadow-md rounded-xl px-5 lg:px-8 py-8 flex flex-col items-center justify-around">
+                  <div className=" round w-[30%] h-20 border-r-2 border-black absolute top-0" />
+                  <div className="rounded-tl-full rounded-full  w-[50%] h-32 border-l-4 absolute top-0" />
+                  <div className="bg-black flex items-center justify-center border-2 mt-20 border-spacing-4 border-gray-400 rounded-full w-20 h-20 ">                 
+                    <SparklesIcon className="text-white w-10 h-10" />
+                  </div>
                   <h1 className="text-gray-600 text-sm">Your rewards</h1>
                   <h2 className="text-3xl font-bold">563.233</h2>
 
-                  <div className="flex justify-between bg-gray-100 mt-10  py-4 px-6 rounded-xl shadow-md gap-10">
-                    <div>
+                  <div className="flex justify-between bg-gray-100 mt-10  py-4 px-6 rounded-xl shadow-md gap-5 lg:gap-24 w-full">
+                    <div className=" text-start">
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-2 bg-black " />
                         <h1 className="font-semibold text-xs">Available</h1>
                       </div>
-                      <h2 className="font-bold text-xl ">233 CRPT</h2>
+                      <span className="font-bold text-xl inline">233 CRPT</span>
                       <p className="text-gray-600 text-sm">$544.343</p>
                     </div>
 
-                    <div className="text-right">
-                      <div className="flex  items-center gap-2 justify-end">
+                    <div className=" text-end ">
+                      <div className="flex items-center gap-2 justify-end">
                         <h1 className="font-semibold text-xs">Staked</h1>
                         <div className="h-2 w-2 bg-black " />
                       </div>
-                      <h2 className="font-bold text-xl">233 CRPT</h2>
+                      <h2 className="font-bold text-xl inline">233 CRPT</h2>
                       <p className="text-gray-600 text-sm">$544.343</p>
                     </div>
+                    
                   </div>
 
-                  <div className="flex justify-between mt-10  py-5 px-6 gap-10">
-                    <div className="flex  items-center gap-4">
-                      <div className="h-4 w-4 bg-black rounded-full" />
+                  <div className="flex justify-between items-center mt-10 py-5 px-3 gap-5 w-full">
+                    <div className="flex  items-center gap-3">
+                      <div className="h-4 w-4 bg-black rounded-full flex items-center justify-center" ><BellIcon className="text-white w-3 h-3"/> </div>
                       <div>
                         <h1 className="font-semibold text-xs">Updates</h1>
                         <h2 className="font-bold text-xs">Nuxt, Premium...</h2>
                       </div>
                     </div>
 
-                    <div className="text-right">
-                      <p className="text-gray-600 text-xs">6 orders</p>
+                    <div className=" flex justify-between gap-2 items-center ">
+                      <p className="text-gray-600 text-xs inline">6 orders</p>
+                      <ChevronRightIcon className="w-3 h-3 text-black font-bold"/>
                     </div>
                   </div>
                 </div>
@@ -223,30 +227,35 @@ export default function Home() {
               </div>
 
               <div>
-                <div className="flex flex-col items-center shadow-sm pb-20 w-full pr-40 ">
+                <div className="flex flex-col items-center shadow-sm pb-20 w-full pr-40 mt-14 sm:mt-0">
                   <div className="flex items-center gap-5">
-                    <div className="h-6 w-6 bg-black rounded-full" />
+                    <div className="flex items-center justify-center h-6 w-6 bg-black rounded-full" >
+                      <BellIcon className="text-white h-4 w-4" />
+                    </div>
                     <h1 className="text-5xl font-bold">CRPT</h1>
                   </div>
                   <p className="font-semibold">Ethereum</p>
                 </div>
 
-                <div className="w-80 h-80" />
+               {/* emptydiv */}
+               <div className="w-80 h-60 lg:w-[25rem] lg:h-[23rem] bg-gray-100 my-5 " />
 
-                <div className="flex  items-center gap-5 bg-gray-100 rounded-lg shadow-sm py-4 px-8">
-                  <div className="h-4 w-4 bg-black rounded-full" />
+                <div className="flex justify-between items-center gap-2  bg-gray-100 rounded-lg shadow-sm py-4 px-2 lg:px-8 w-full">
+                  <div className="flex  items-center justify-center h-6 w-6 bg-black rounded-full border-4 border-white" >
+                    <BellIcon className="text-white h-3 w-3" />
+                  </div>
                   <div>
                     <h1 className="font-semibold text-xs text-gray-600">
-                      Total balance
+                      Total Balance
                     </h1>
                     <h2 className="font-bold text-sm">$16,937,800.76</h2>
-                    <p className="text-gray-600">1,237,3679</p>
+                    <p className="text-gray-600 text-xs">1,237,3679</p>
                   </div>
-                  <div className="flex justify-between gap-5">
-                    <button className="text-xs font-bold shadow-md px-10 py-2 rounded-lg">
+                  <div className="flex justify-between gap-2 lg:gap-5">
+                    <button className="text-xs font-bold shadow-md px-7 lg:px-10 py-2 rounded-lg bg-white text-black">
                       Buy
                     </button>
-                    <button className="text-xs font-bold shadow-md px-10 py-2 rounded-lg">
+                    <button className="text-xs font-bold shadow-md  px-7 lg:px-10 py-2 rounded-lg bg-white text-black">
                       Receive
                     </button>
                   </div>

@@ -16,12 +16,13 @@
 */
 import { Fragment } from "react";
 import { Menu, Popover, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, CreditCardIcon, TagIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import avatar from "../../assets/logos/ethereum-eth.svg";
 import logo from "../../assets/logos/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { ChartBarSquareIcon } from "@heroicons/react/20/solid";
 
 const user = {
   name: "Omimi Dev",
@@ -29,8 +30,8 @@ const user = {
   imageUrl: avatar,
 };
 const navigation = [
-  { name: "Stake", href: "/" },
-  { name: "Reward", href: "/reward" },
+  { name: "Stake", href: "/", icon:<TagIcon/> },
+  { name: "Reward", href: "/reward", icon :<ChartBarSquareIcon /> },
 ];
 
 const userNavigation = [
@@ -165,12 +166,13 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-8 py-3 text-sm font-medium rounded-full  ${
+                className={`px-8 py-3 text-sm font-medium rounded-full flex items-center justify-between gap-2 ${
                   location === item.href
                     ? "text-black bg-white"
                     : "text-white bg-transparent"
                 }`}
               >
+               <p className="w-4 h-4"> {item.icon} </p>
                 {item.name}
               </Link>
             ))}
@@ -186,11 +188,12 @@ export default function Header() {
             </button>
             <button
               type="button"
-              className="flex-shrink-0 ml-4 rounded-full font-medium bg-white px-8 py-4
+              className="flex flex-shrink-0 items-center gap-2 ml-4 rounded-full font-medium bg-white px-8 py-4
                  text-black hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
               <span className="sr-only">Connect Wallet</span>
               Connect Wallet
+              <p><CreditCardIcon className="w-5 h-5 " /> </p>           
             </button>
 
             {/* Profile dropdown */}

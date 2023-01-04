@@ -124,3 +124,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.round{
+  border-radius: 0 200px 0 0 ;
+}
