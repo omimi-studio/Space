@@ -21,13 +21,17 @@ import avatar from "../../assets/logos/ethereum-eth.svg";
 import logo from "../../assets/logos/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const user = {
   name: "Omimi Dev",
   email: "omimi@example.com",
   imageUrl: avatar,
 };
-const navigation = [{ name: "Stake", href: "/" },{ name: "Reward", href: "/reward" }];
+const navigation = [
+  { name: "Stake", href: "/" },
+  { name: "Reward", href: "/reward" },
+];
 
 const userNavigation = [
   { name: "Your Profile", href: "/profile" },
@@ -160,7 +164,11 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-8 py-3 text-sm font-medium text-black rounded-full bg-white"
+                className={`px-8 py-3 text-sm font-medium rounded-full  ${
+                  useRouter().pathname === item.href
+                    ? "text-black bg-white"
+                    : "text-white bg-transparent"
+                }`}
               >
                 {item.name}
               </Link>

@@ -227,7 +227,7 @@ export default function Home() {
                       onChange={(e) => {
                         SetStakeAmount(e.target.value);
                       }}
-                      className="block w-full font-bold appearance-none rounded-md border-black border-2 bg-gray-100 px-5 pt-2 pb-4 placeholder-gray-500 shadow-sm focus:border-black focus:outline-none focus:ring-black text-2xl sm:text-3xl md:text-5xl"
+                      className="block w-full font-bold appearance-none rounded-md border-black border-2 bg-gray-100 px-5 pt-2 pb-4 placeholder-gray-500 text-black shadow-sm focus:border-black focus:outline-none focus:ring-black text-2xl sm:text-3xl md:text-5xl"
                     />
                     <div className="absolute inset-y-0 right-0 flex items-center pr-4">
                       <Select />
