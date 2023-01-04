@@ -168,15 +168,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="mx-auto mt-5 grid glassmorphic max-w-3xl grid-cols-1 py-6 sm:rounded-lg sm:px-6 lg:max-w-5xl ">
+      <div className="mx-auto mt-5 grid glassmorphic  grid-cols-1 py-6 sm:rounded-lg px-2 sm:px-6 lg:max-w-5xl ">
         <section
           className="space-y-6 lg:col-span-2 lg:col-start-1"
           aria-labelledby="stake-form"
         >
           <div className="bg-white text-black p-2 lg:p-10 shadow sm:rounded-lg min-h-[70vh]">
-            <div className="flex flex-col sm:flex-row  justify-between ">
+            <div className="flex flex-col sm:flex-row justify-between ">
               <div>
-                <div className="relative shadow-md rounded-xl px-5 lg:px-8 py-8 flex flex-col items-center justify-around">
+                <div className="flex flex-col items-center justify-around relative shadow-md rounded-xl px-5 lg:px-8 py-8 ">
                   <div className=" round w-[30%] h-20 border-r-2 border-black absolute top-0" />
                   <div className="rounded-tl-full rounded-full  w-[50%] h-32 border-l-4 absolute top-0" />
                   <div className="bg-black flex items-center justify-center border-2 mt-20 border-spacing-4 border-gray-400 rounded-full w-20 h-20 ">                 
