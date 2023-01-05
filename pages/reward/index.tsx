@@ -227,7 +227,7 @@ export default function Home() {
               </div>
 
               <div>
-                <div className="flex flex-col items-center shadow-sm pb-20 w-full pr-40 mt-14 sm:mt-0">
+                <div className="flex flex-col items-center shadow-sm pb-20 w-full pr-40 pl-10 lg:pl-0 mt-14 sm:mt-0">
                   <div className="flex items-center gap-5">
                     <div className="flex items-center justify-center h-6 w-6 bg-black rounded-full" >
                       <BellIcon className="text-white h-4 w-4" />
@@ -252,10 +252,10 @@ export default function Home() {
                     <p className="text-gray-600 text-xs">1,237,3679</p>
                   </div>
                   <div className="flex justify-between gap-2 lg:gap-5">
-                    <button className="text-xs font-bold shadow-md px-7 lg:px-10 py-2 rounded-lg bg-white text-black">
+                    <button className="text-xs font-bold shadow-md px-5 lg:px-10 py-2 rounded-lg bg-white text-black">
                       Buy
                     </button>
-                    <button className="text-xs font-bold shadow-md  px-7 lg:px-10 py-2 rounded-lg bg-white text-black">
+                    <button className="text-xs font-bold shadow-md  px-5 lg:px-10 py-2 rounded-lg bg-white text-black">
                       Receive
                     </button>
                   </div>
