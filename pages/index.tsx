@@ -81,7 +81,7 @@ export default function Home() {
             </button>
 
             <div className="relative mt-1">
-              <Listbox.Button className="relative w-full cursor-default border-l border-gray-300 py-2 pl-3 pr-10 text-left shadow-sm focus:border-white focus:outline-none focus:ring-1 focus:ring-white sm:text-sm">
+              <Listbox.Button className="relative w-full cursor-default border-l border-gray-300 py-2 pl-3 pr-10 text-left sm:text-sm">
                 <span className="flex items-center">
                   <Image
                     src={selected.icon}
@@ -90,7 +90,7 @@ export default function Home() {
                       selected.name === "nQNT" && "hue-rotate-180"
                     }`}
                   />
-                  <span className="ml-3 block truncate">{selected.name}</span>
+                  <span className="ml-3 block truncate text-black font-bold">{selected.name}</span>
                 </span>
                 <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
                   <ChevronDownIcon
@@ -113,7 +113,7 @@ export default function Home() {
                       key={token.id}
                       className={({ active }) =>
                         classNames(
-                          active ? "text-white bg-indigo-600" : "text-gray-900",
+                          active ? "text-black bg-indigo-600" : "text-gray-900",
                           "relative cursor-default select-none py-2 pl-3 pr-9"
                         )
                       }
@@ -143,7 +143,7 @@ export default function Home() {
                           {selected ? (
                             <span
                               className={classNames(
-                                active ? "text-white" : "text-indigo-600",
+                                active ? "text-black" : "text-indigo-600",
                                 "absolute inset-y-0 right-0 flex items-center pr-4"
                               )}
                             >
@@ -168,9 +168,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="mx-auto mt-5 glassmorphic max-w-2xl py-6 sm:rounded-lg sm:px-6">
+      <div className="mx-auto mt-5 glassmorphic max-w-2xl p-6 rounded-lg">
         <section aria-labelledby="stake-form">
-          <div className="bg-white p-2 sm:p-5 shadow sm:rounded-lg min-h-[70vh]">
+          <div className="bg-white p-2 sm:p-5 shadow rounded-lg min-h-[70vh]">
             <div className="flex items-end flex-wrap gap-3 justify-between px-4 py-5 sm:px-6 max-w-xl mx-auto">
               <span>
                 <h2

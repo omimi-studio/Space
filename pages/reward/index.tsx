@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <div className="max-w-5xl mx-auto mt-5 glassmorphic p-6  rounded-lg ">
       <section
-        className="bg-white flex flex-col sm:flex-row justify-between items-start rounded-lg p-4 sm:p-10 "
+        className="bg-white flex flex-col  gap-10 sm:flex-row justify-between items-start rounded-lg p-4 sm:p-10 "
         aria-labelledby="stake-form"
       >
         <div className="flex flex-col w-full justify-center">
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
 
         {/* stats */}
-        <div className="flex flex-col w-full  text-black p-1 sm:p-6">
+        <div className="flex flex-col w-full  text-black">
           <div className="flex flex-col items-start  border-b border-gray-100 pb-14  text-black">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center justify-center h-10 w-10 bg-black rounded-full">
@@ -160,7 +160,7 @@ export default function Home() {
             </div>
           </div>
           {/* chartjs */}
-          <div className=" h-[18rem] w-full  my-5 ">
+          <div className=" sm:h-[18rem]  w-full  my-5 ">
             <Chart />
           </div>
 
@@ -173,8 +173,8 @@ export default function Home() {
                 <h1 className="font-semibold text-xs text-gray-600">
                   Total Balance
                 </h1>
-                <h2 className="font-bold text-sm">$16,937,800.76</h2>
-                <p className="text-gray-600 text-xs">1,237,3679</p>
+                <h2 className="font-bold text-xs">$16,937</h2>
+                <p className="text-gray-600 text-xs">1,237</p>
               </div>
             </div>
 
